@@ -1,0 +1,21 @@
+.mainContainer {
+  width: 60%;
+  margin: 20px auto;
+  padding: 8px;
+}
+
+.btnLogout{
+    background-color: #ffffff;
+     border: 1px solid rgb(233, 97, 34);
+    border-radius: 4px;
+    width: 100px;
+    margin: 16px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btnLogout:hover {
+    background-color: rgb(233, 97, 34);
+    color: #ffffff;
+    box-shadow: 0px 2px 3px #ccc;
+}

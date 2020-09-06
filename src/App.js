@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import "./App.css";
+import Main from "./containers/Main/Main";
+import Auth from "./containers/Auth/Auth";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+class App extends Component {
+  routes = (
+    <Switch>
+      <Route path="/auth" exact component={Auth} />
+      <Redirect to="/auth" />
+    </Switch>
   );
+
+  componentDidMount() {
+    if (this.props.isAuth || localStorage.getItem("token")) {
+      this.routes = (
+        <Switch>
+          <Route path="/" exact component={Main} />
+          <Redirect to="/" />
+        </Switch>
+      );
+    }
+  }
+
+  render() {
+    return <div>{this.routes}</div>;
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isAuth: state.auth.token !== null,
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(App));

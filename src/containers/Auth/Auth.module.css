@@ -1,0 +1,50 @@
+.auth {
+  margin: 100px auto;
+  width: 500px;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.btnSubmit,
+.btnRegister {
+  background-color: #ffffff;
+  border: 1px solid rgba(117, 201, 142, 0.623);
+  border-radius: 4px;
+  width: 100px;
+  display: block;
+  margin: 16px auto;
+  padding: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btnSubmit:hover {
+  background-color: rgba(117, 201, 142, 0.623);
+  color: #ffffff;
+  box-shadow: 0px 2px 3px #ccc;
+}
+
+.btnRegister {
+  border: 1px solid rgb(233, 97, 34);
+  width: fit-content;
+}
+
+.btnRegister:hover {
+  background-color: rgb(233, 97, 34);
+  color: #ffffff;
+}
+
+.btnSubmit:focus,
+.btnSubmit:active,
+.btnRegister:focus,
+.btnRegister:active {
+  outline: none;
+}
+
+.errorMsg {
+  color: red;
+  font-weight: 600;
+  text-align: center;
+}

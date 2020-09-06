@@ -1,0 +1,32 @@
+.adminsUl {
+  list-style: none;
+  margin: 16px;
+  padding: 0;
+  border: 1px solid rgba(117, 201, 142, 0.623);
+  border-radius: 4px;
+  box-shadow: 0px 2px 3px #ccc;
+}
+
+.adminsLi {
+  padding: 16px;
+  margin: auto;
+  border: 1px solid rgba(117, 201, 142, 0.623);
+  font-weight: 600;
+}
+
+hr {
+  border: 1px solid rgba(117, 201, 142, 0.623);
+}
+
+.evenRow {
+  background-color: rgba(117, 201, 142, 0.623);
+}
+
+.onVacation {
+  color: red;
+}
+
+.qContainer {
+  display: flex;
+  justify-content: space-between;
+}
