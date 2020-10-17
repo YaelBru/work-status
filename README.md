@@ -1,3 +1,3 @@
 # Work Status Exercise
 
-An exercise in React, using React, React Hooks, Redux, Node.js and MongoDB.
+React project, using React Hooks, Redux, Node.js and MongoDB.
